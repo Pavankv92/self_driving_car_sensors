@@ -12,7 +12,7 @@ Detects objects and estimate their parameters from a distance. A FMCW (Frequency
         * Doppler effect
         * Frequency modulation
         * Beat frequency 
-    * Heading angle
+    * Heading angle/direcction (Azimuth & Elevation)
     * RCS (Used for OD&C)
 
 
