@@ -1,15 +1,19 @@
 # Radar
 Detects objects and estimate their parameters from a distance. A FMCW (Frequency Modulated Continuous Wave) radar offers relatively small form factor with low power and low cost.
-Applications of FMCW Radar
+
+#### Applications of FMCW Radar
     * BSD: blind spot detection
     * RCW: rear collision detection
     * ACC: Adaptive cruice control
-    * D&C: object detection and classification (Pedestrians, Bicycle, Cars/Vehicles, etc)
-FMCW can measure,
+    * OD&C: object detection and classification (Pedestrians, Bicycle, Cars/Vehicles, etc)
+#### FMCW radar can measure
     * Range(distance)
     * Relative velocity
-    * heading angle
-    * RCS (Used for D&C)
+        * Doppler effect
+        * Frequency modulation
+        * Beat frequency 
+    * Heading angle
+    * RCS (Used for OD&C)
 
 
 
@@ -27,6 +31,7 @@ FMCW can measure,
 
 
 # All sensors in a nutshell
+[source](https://github.com/fanweng/Udacity-Sensor-Fusion-Nanodegree/blob/main/README.md)
 
 |  Criteria  |  Lidar  |  Radar  |  Camera  |
 |------------|---------|---------|----------|
