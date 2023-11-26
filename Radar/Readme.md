@@ -23,11 +23,35 @@ For a lot of practical systems, antenna transmits the power in a specific direct
 This Tx power will be attenuated while travelling through environment (Air, snow, rain etc) and attenuation is strong fucntion of transmit freq. This environmental attenuation is captured in a loss factor L >1.
 
 
-As Tx travels through environment, an object with a area $A$ intercepts ($A *$ power density). RCS is what the area $A$ would be if the power that the object intercepts was re-radiated isotropically. 
+As Tx travels through environment, an object with a area $A$ intercepts ($A *$ power density). RCS (Radar cross section $\sigma$) is what the area $A$ would be if the power that the object intercepts was re-radiated isotropically. 
 
 ![RCS](./data/RCS.png)
 
 ![RCS 1](./data/RCS_1.png)
+
+
+If the object re-radiates non isotropically, power density dpends on the direction. We can calculate the RCS for each direction (RCS is a direction dependent)
+
+![RCS 2](./data/RCS_2.png)
+
+![RCS 3](./data/RCS_3.png)
+
+It could be that re-radiated power also reflected the by terrain. When this terrain reflected signals can have constructive/destructive effect on merging and captured in $F$ ($F<1$ : destructive) ($F>1$ : constructive) depends on shape of the terrain, object shape, type etc.
+
+![obect phase diff](./data/object_phase_diff.png)
+
+Antenna receives this Rx signal. Rx depends on anetenna area, internal losses etc.
+
+![Rx](./data/Rx.png)
+
+We can take all the geometric parameters of the antenna and express received power in terms of receiver gain $Gr$.
+
+![Rx_1](./data/Rx_1.png)
+
+Antenna also receives noise. Noise power $N = K T_s B_n$ (K: Boltsmann constant, $T_s$: System noise temperature, $B_n$: Noise bandwidth of the signal). Now, we calculate the SNR (ration of received signal power / received noise power)
+
+![Rx_noise](./data/Rx_noise.png)
+
 
 # Velocity measurements
 
