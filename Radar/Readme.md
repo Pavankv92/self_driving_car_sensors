@@ -1,8 +1,39 @@
+# Radar
+
+Radar transmits the EM waves (Tx) which travels through the space and bounces off the objects. Part of these reflected waves is received by the radar (Rx) along with the noise. Below image shows Tx and Rx in freq domain. a lot of Tx power is centered around a certain freq and Rx not only has lot less power in comparison to Tx also power is shifted due to dopper effect. Rx also has significant noise from the environment, electronics etc. Finding the peak of Rx is important to determine distance, velocity, angle of the object.
+
+![radar basic operation](./data/radar_basic_operation.png)
+
+
+If the Rx is too low or SNR is too low (SNR 100% = full signal with 0 noise) in other words, low Rx power with high noise makes it unusable.
+
+![SNR](./data/SNR.png)
+
+
+#### Radar equation
+
+An isotropic radar as shown below transmits peak power $Pt$ in all direction equally with equal power density $(Pt/surface\ area)$  
+
+![radar basic equation](./data/radar_basic_equation.png)
+
+For a lot of practical systems, antenna transmits the power in a specific direction (TV antenna) concentrating the power in a specific direction. For the same peak power, power density has decreased (in comparision to isotropic antenna)in most directions and increased in the direction of the beam. This increase in the power density relative to the isotropic is the antenna gain $Gt$.
+
+![antenna gain](./data/antenna_gain.png)
+
+This Tx power will be attenuated while travelling through environment (Air, snow, rain etc) and attenuation is strong fucntion of transmit freq. This environmental attenuation is captured in a loss factor L >1.
+
+
+As Tx travels through environment, an object with a area $A$ intercepts ($A *$ power density). RCS is what the area $A$ would be if the power that the object intercepts was re-radiated isotropically. 
+
+![RCS](./data/RCS.png)
+
+![RCS 1](./data/RCS_1.png)
+
 # Velocity measurements
 
 #### Doppler effect
 
-FMCW generator blasts the waves (Tx: microwave range, in GHz), waves hits the obejct and reflects back (Rx: microwave range, in GHz). The state of the object effects the frequency of the reflected wave.
+FMCW generator blasts the EM waves (Tx: microwave range, in GHz), waves hits the obejct and reflects back (Rx: microwave range, in GHz). The state of the object effects the frequency of the reflected wave.
 
   * Frequency unchanged : Stationary object
   * Frequency increased : Object approaching towards the radar
@@ -74,11 +105,11 @@ Zero angle
 
 ![zero angle](data/zero_angle.png)
 
-with some angle. Measurement of I & Q values at each antenna traces a sign wave.
+with some angle. Measurement of I & Q values at each antenna traces a sign wave. The FFT (Fast Fourier Transforms) of the sign wave created by the I&Q signals is shown bottom right corner (Amplitude vs $sin(\theta)$). Peak in the FFT represents the angle. In this example peak is at $sin(\theta) = 0.5 = 30°$ 
 
 ![antenna array](data/with_angle.png)
 
-Usually FFT (Fast Fourier Transforms) is employed to measurephase diff.
+
 
 ##### Sources
 * [Brian Douglas](https://www.youtube.com/watch?v=-N7A5CIi0sg&t=301s) 
