@@ -1,4 +1,16 @@
-# Radar
+# Self drving car sensors
+
+Collection of theory and code about sensors used in self drving cars. 
+
+* [x] Radar
+* [x] Camera
+* [x] Lidar
+* [ ] GPS
+* [ ] IMU
+* [ ] Sensor system calibration  
+
+
+## Radar
 Detects objects and estimate their parameters from a distance. A FMCW (Frequency Modulated Continuous Wave) radar offers relatively small form factor with low power and low cost.
 
 #### [Radar Theory](Radar/Readme.md)
@@ -17,10 +29,7 @@ Detects objects and estimate their parameters from a distance. A FMCW (Frequency
   * Heading angle/direcction (Azimuth & Elevation)
   * RCS (Used for OD&C)
 
-
-
-
-# Camera 
+## Camera 
 
 #### [Camera Theory](Camera/Documents/Camera%20Calibration.pdf)
 
@@ -30,7 +39,12 @@ Detects objects and estimate their parameters from a distance. A FMCW (Frequency
   * [How to use it and results](Camera/README.md)
 
 
-# All sensors in a nutshell
+## Lidar
+
+#### [Lidar Theory](Lidar/readme.md)
+
+
+## All sensors in a nutshell
 [source](https://github.com/fanweng/Udacity-Sensor-Fusion-Nanodegree/blob/main/README.md)
 
 |  Criteria  |  Lidar  |  Radar  |  Camera  |
